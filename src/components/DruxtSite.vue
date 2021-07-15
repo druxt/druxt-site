@@ -104,7 +104,7 @@ export default {
      * An array of unique region names.
      * @return {string[]}
      */
-    regions: ({ model, value }) => model || value || [],
+    regions: ({ model, value }) => Array.isArray((model || value)) ? (model || value) : [],
   },
 
   methods: {
